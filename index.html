@@ -1,1 +1,52 @@
-index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">Daily<span>Series</span></h1>
+            <div class="streak-badge">
+                <span class="streak-number" id="streakCount">0</span>
+                <span class="streak-label">дней подряд</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="entryForm" class="entry-form">
+                    <textarea 
+                        id="entryText" 
+                        placeholder="Что вы сделали сегодня? Напишите одной строкой..."
+                        rows="2"
+                        required
+                    ></textarea>
+                    <button type="submit" class="submit-btn">Добавить</button>
+                </form>
+                <p id="formMessage" class="form-message"></p>
+            </section>
+
+            <section class="entries-section">
+                <h2 class="section-title">История записей</h2>
+                <div id="entriesList" class="entries-list">
+                    <!-- Записи будут добавляться динамически -->
+                </div>
+                <p id="emptyState" class="empty-state">Пока нет записей. Начните сегодня!</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Данные хранятся локально в вашем браузере.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
